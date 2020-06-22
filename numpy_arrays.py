@@ -29,3 +29,9 @@ print(np.ones([5,5]))
 #an eye matrix
 
 print(np.eye(5))
+
+#create array with a start, stop and step
+# for an evenly spaced values within a given interval
+
+print(np.arange(0, 100, 25))
+print(np.arange(5))
