@@ -26,3 +26,6 @@ print(zeroed)
 
 print(np.ones([5,5]))
 
+#an eye matrix
+
+print(np.eye(5))
