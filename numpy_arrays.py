@@ -21,3 +21,8 @@ print(matrix_array.dtype)
 
 zeroed = np.zeros((2, 5))
 print(zeroed)
+
+#create array of ones - shape passed as list
+
+print(np.ones([5,5]))
+
