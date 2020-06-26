@@ -35,3 +35,13 @@ print(np.eye(5))
 
 print(np.arange(0, 100, 25))
 print(np.arange(5))
+
+#multipling array just like in linear algebra
+
+arr1 = np.array([[1, 2, 3, 4], [4, 3, 2, 1]])
+print(arr1)
+print(arr1*arr1)
+print(arr1*2)
+print(1 / arr1)
+print(arr1**2)
+print(arr1**0.5)
