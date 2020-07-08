@@ -28,12 +28,12 @@ print(np.ones([5,5]))
 
 #an eye matrix
 
-print(np.eye(5))
+print(np.eye(3))
 
 #create array with a start, stop and step
 # for an evenly spaced values within a given interval
 
-print(np.arange(0, 100, 25))
+print(np.arange(1, 100, 5))
 print(np.arange(5))
 
 #multipling array just like in linear algebra
@@ -45,3 +45,27 @@ print(arr1*2)
 print(1 / arr1)
 print(arr1**2)
 print(arr1**0.5)
+
+#array indexin
+new_arr = np.arange(21)
+#get a value from the aray
+new_arr[8]
+#get a range of values from the array
+new_arr[1:5]
+
+#set the values in a range
+new_arr[1:5] = 100
+#slice of a array is a new array
+slice_new_arr = new_arr[10:16]
+#select all elements in array and assingn the same value
+slice_new_arr[:] = 99
+#when the slice is modified the original array is modified as well
+new_arr
+#to make a copy of an array in order not to affect the original
+#an explicit copy must be made
+slice_copy = slice_new_arr.copy()
+slice_copy
+slice_copy[:] = 96
+slice_new_arr
+new_arr
+slice_copy
