@@ -30,6 +30,10 @@ print(np.ones([5,5]))
 
 print(np.eye(3))
 
+#another way to create a matrix array
+#reshape tells how many rows and columns the matrix should have
+np.arange(100).reshape(10, 10)
+
 #create array with a start, stop and step
 # for an evenly spaced values within a given interval
 
@@ -69,3 +73,74 @@ slice_copy[:] = 96
 slice_new_arr
 new_arr
 slice_copy
+
+#indexing 2d arrays
+
+
+arr2d = np.array([[1, 2, 3],
+                      [4, 5, 6],
+                      [7, 8, 0],
+                      [32, 33, 0],
+                      [99, 2, 5]])
+print(arr2d[2:, :2])
+    #fancy indexing means selecting random rows
+arr2d[[2,4, 0, 1]]
+
+#transposing an array, fliping rows into columns
+arr2d.T
+
+#dot product
+np.dot([1, 2, 3], [3, 2, 1])
+np.dot(arr2d, arr2d.T)
+
+#3d array
+arr3d = np.arange(50).reshape((5, 5, 2))
+print(arr3d)
+
+#3d arrays can be transposed as well
+
+print(arr3d.transpose((1, 0, 2)))
+
+#arrays can swap axes
+
+print(arr3d.swapaxes(0, 1))
+
+#NUMPY UNIVERSAL FUNCTIONS
+#universal functions are functions that can be applied
+#to any value in an array
+
+arr = np.arange(5)
+# 1. square root
+np.sqrt(arr)
+
+# 2. exponential function
+#ridicare numarului lui Euler la o putere indicata
+#in acest caz, fiecare valoare din sir
+
+np.exp(arr)
+
+#binary functions
+
+# 1. adding arrays
+
+A = np.array([1, 2, 3])
+B = np.array([6, 7, 8])
+print(np.add(A, B))
+
+# 2. multiplication
+print(np.multiply(A, B))
+
+# 3. division
+
+print(np.divide(B, A))
+
+# 4. maximum
+#compares the maximum at each index
+
+print(np.maximum(A, B))
+
+# 5. Minimum
+
+print(np.minimum(A, B))
+
+all_universal_functions_documentation = 'https://numpy.org/doc/stable/reference/ufuncs.html#available-ufuncs'
